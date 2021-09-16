@@ -23,10 +23,21 @@ public class Ejercicio4 {
     }
 
     public static void main(String[] args) throws IOException {
-        crateTmpDir("d1");
-        createTmpFile("d1", "f11");
-        createTmpFile("d2", "f22");
-        crateTmpDir("d2");
+        try {
+            log.info("creando directorio d1... ");
+            crateTmpDir("d1");
+            log.info("Creando fichero f11.txt....");
+            createTmpFile("d1", "f11.txt");
+            log.info("creando directorio d2... ");
+            crateTmpDir("d2");
+            log.info("Creando fichero f22.txt....");
+            createTmpFile("d2", "f22.txt");
+        }catch (IOException e) {
+            log.error("ha habid un error al intertar crea una carpeta o archivo", e);
+        }
+
+
+
     }
 
 

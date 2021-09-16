@@ -18,7 +18,7 @@ public class Ejercicio4 {
     }
 
     public  static void createTmpFile(String dir, String fileName) throws IOException {
-        File file = new File("/tmp/" + dir + fileName);
+        File file = new File("/tmp/" + dir + "/" + fileName);
         file.createNewFile();
     }
 

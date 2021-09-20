@@ -33,3 +33,8 @@
 2021-09-16 12:44:35 INFO  Ejercicio5:22 - Moviendo/renombrando /tmp/d1/f11.txt a nueva ruta /tmp/d1/f12.txt
 2021-09-16 12:44:35 INFO  Ejercicio5:22 - Moviendo/renombrando /tmp/d2/f22.txt a nueva ruta /tmp/d1/f22.txt
 2021-09-16 12:44:35 INFO  Ejercicio5:31 - Borrando /tmp/d2
+2021-09-20 10:35:57 INFO  Ejecicio6:21 - f11.txt
+2021-09-20 10:35:57 INFO  Ejecicio6:23 - C:\tmp\d1\f11.txt
+2021-09-20 10:35:57 INFO  Ejecicio6:37 - no se puede ejecutar
+2021-09-20 10:35:57 INFO  Ejecicio6:43 - no se puede ver el arhivo
+2021-09-20 10:35:57 INFO  Ejecicio6:49 - no se puede modificar el archivo

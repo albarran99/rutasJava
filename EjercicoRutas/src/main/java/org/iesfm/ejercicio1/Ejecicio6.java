@@ -11,43 +11,57 @@ public class Ejecicio6 {
     private static final Logger log = LoggerFactory.getLogger(Ejecicio6.class);
 
     public static void main(String[] args) {
-        File file = new File(args[0]);
 
-        filesInfo(file);
+        if (args.length == 0) {
+            log.error("debe haber argumentos");
+        } else {
+            File folder = new File(args[0]);
+            filesInfo(folder);
+
+        }
     }
 
     public static void filesInfo(File fileCheck) {
 
-        log.info(fileCheck.getName());
+        if (fileCheck.exists()) {
+            log.info("el nombre es " + fileCheck.getName());
 
-        log.info(fileCheck.getAbsolutePath());
+            log.info("Su ruta es " + fileCheck.getAbsolutePath());
 
-        fileCheck.length();
+            log.info("Tamaño de el archivo " + fileCheck.length());
 
-        if(fileCheck.isDirectory()) {
-            System.out.println("Es un Directorio");
+            if (fileCheck.isDirectory()) {
+                log.info("Es un Directorio");
+
+            } else if (fileCheck.isFile()) {
+                log.info("Es un Archivo");
+            }
+
+            log.info(("Ultima vez modificado " + fileCheck.lastModified()));
+
+            if (fileCheck.canExecute()) {
+                log.info("se puede ejecutar");
+            } else {
+                log.info("no se puede ejecutar");
+            }
+
+            if (fileCheck.canRead()) {
+                log.info("se puede ver el archivo");
+            } else {
+                log.info("no se puede ver el archivo");
+            }
+
+            if (fileCheck.canWrite()) {
+                log.info("se puede modificar el archivo");
+            } else {
+                log.info("no se puede modificar el archivo");
+            }
         } else {
-            fileCheck.isFile();
-            System.out.println("Es un Archivo");
+            log.error("no existe el archivo");
         }
 
-        if(fileCheck.canExecute()) {
-            log.info("se puede ejecutar");
-        } else {
-            log.info("no se puede ejecutar");
-        }
-
-        if(fileCheck.canRead()) {
-            log.info("se puede ver el archivo");
-        }else {
-            log.info("no se puede ver el archivo");
-        }
-
-        if(fileCheck.canWrite()) {
-            log.info("se puede modificar el archivo");
-        } else {
-            log.info("no se puede modificar el archivo");
-        }
     }
 
 }
+
+
